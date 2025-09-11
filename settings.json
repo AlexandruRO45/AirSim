@@ -1,48 +1,51 @@
 {
   "SeeDocsAt": "https://cosys-lab.github.io/Cosys-AirSim/settings/",
   "SettingsVersion": 2.0,
+  "RecordUIVisible": false,
+  "LogMessagesVisible": true,
   "ClockType": "SteppableClock",
   "SimMode": "Multirotor",
 
-  "OriginGeopoint": 
-  {
+  "LocalHostIp": "192.168.137.1",
+  "ApiServerPort": 41451,
+
+  "OriginGeopoint": {
     "Latitude": 44.4268,
     "Longitude": 26.1025,
     "Altitude": 170
   },
 
-  "Vehicles": 
-  {
-    "SimpleFlight": 
-    {
-      "VehicleType": "PX4Multirotor",
-      "UseSerial": false,
-      "Lockstep": true,
-      "UseTcp": true,
-      "QgcHostIp": "",
-      "TcpPort": 4560,
-      "ControlIp": "192.168.137.2",
-      "ControlPort": 14580,
-      "LocalHostIp": "192.168.137.1"
-    }
+  "Recording": {
+    "RecordOnMove": true,
+    "RecordInterval": 0.05,
+    "Enabled": false,
+    "Cameras": [
+        { "CameraName": "0", "ImageType": 0, "PixelsAsFloat": false,  "VehicleName": "SimpleFlight", "Compress": true }
+    ]
   },
 
   "SubWindows": [
-    {
-      "WindowID": 0,
-      "ImageType": 3,
-      "Visible": true
-    },
-    {
-      "WindowID": 1,
-      "ImageType": 5,
-      "Visible": true
-    },
-    {
-      "WindowID": 2,
-      "ImageType": 0,
-      "Visible": true
+    {"WindowID": 0, "CameraName": "0", "ImageType": 3, "VehicleName": "", "Visible": false, "External": false},
+    {"WindowID": 1, "CameraName": "0", "ImageType": 5, "VehicleName": "", "Visible": false, "External": false},
+    {"WindowID": 2, "CameraName": "0", "ImageType": 0, "VehicleName": "", "Visible": false, "External": false}
+  ],
+
+  "Vehicles": {
+    "SimpleFlight": {
+      "VehicleType": "SimpleFlight",
+      "DefaultVehicleState": "Inactive",
+      "AutoCreate": true,
+      "EnableCollisionPassthrogh": false,
+      "EnableCollisions": true,
+      "AllowAPIAlways": true,
+      "EnableTrace": false,
+      "RC": {
+        "RemoteControlID": -1,
+        "AllowAPIWhenDisconnected": true
+      },
+      "X": 0, "Y": 0, "Z": 0.35,
+      "Pitch": 0.0, "Roll": 0.0, "Yaw": 0.0
     }
-  ]
+  }
 
 }
