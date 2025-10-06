@@ -3,38 +3,166 @@
   "SettingsVersion": 2.0,
   "RecordUIVisible": false,
   "Recording": {
-    "Enabled": true
+    "RecordOnMove": false,
+    "RecordInterval": 0.05,
+    "Cameras": []
   },
   "LogMessagesVisible": true,
   "ClockType": "SteppableClock",
   "SimMode": "Multirotor",
-
-  "LocalHostIp": "192.168.137.1",
-  "ApiServerHost": "192.168.137.2",
-  "ApiServerPort": 41451,
 
   "OriginGeopoint": {
     "Latitude": 44.503,
     "Longitude": 26.102,
     "Altitude": 140
   },
-
+  
   "Vehicles": {
-    "SimpleFlight": {
-      "VehicleType": "SimpleFlight",
-      "DefaultVehicleState": "Inactive",
+    "PX4": {
+      "VehicleType": "PX4Multirotor",
       "AutoCreate": true,
-      "EnableCollisionPassthrogh": false,
-      "EnableCollisions": true,
-      "AllowAPIAlways": true,
-      "EnableTrace": false,
-      "RC": {
-        "RemoteControlID": -1,
-        "AllowAPIWhenDisconnected": true
+      
+      "X": 0, 
+      "Y": 0, 
+      "Z": 0,
+      "Pitch": 0, 
+      "Roll": 0, 
+      "Yaw": 0,
+      
+      "Lockstep": true,
+      
+      "UseSerial": false,
+      "UseTcp": false,
+      "SerialPort": "*",
+      "SerialBaudRate": 115200,
+      "TcpPort": 4560,
+      
+      "UdpIp": "172.24.192.1",
+      "UdpPort": 14560,
+      
+      "ControlIp": "172.24.192.1",
+      "ControlPortLocal": 14540,
+      "ControlPortRemote": 14580,
+      
+      "QgcHostIp": "172.24.192.1",
+      "QgcPort": 14550,
+      
+      "LogViewerHostIp": "172.24.192.1",
+      "LogViewerPort": 14388,
+      
+      "OffboardSysID": 134,
+      "OffboardCompID": 1,
+      
+      "VehicleSysID": 135,
+      "VehicleCompID": 1,
+      
+      "SimSysID": 142,
+      "SimCompID": 42,
+      
+      "LocalHostIp": "172.24.192.1",
+      "Model": "Generic",
+      
+      "Logs": "",
+      
+      "Sensors": {
+        "Barometer": {
+          "SensorType": 1,
+          "Enabled": true,
+          "PressureFactorSigma": 0.01825
+        },
+        "Imu": {
+          "SensorType": 2,
+          "Enabled": true,
+          "AngularRandomWalk": 0.3,
+          "GyroBiasStabilityTau": 3600.0,
+          "GyroBiasStability": 4.6e-05,
+          "VelocityRandomWalk": 0.24,
+          "AccelBiasStabilityTau": 3600.0,
+          "AccelBiasStability": 0.00036
+        },
+        "Gps": {
+          "SensorType": 3,
+          "Enabled": true,
+          "EphTimeConstant": 0.9,
+          "EpvTimeConstant": 0.9,
+          "EphInitial": 25.0,
+          "EpvInitial": 25.0,
+          "EphFinal": 0.1,
+          "EpvFinal": 0.1,
+          "EphMin3d": 3.0,
+          "EphMin2d": 4.0,
+          "UpdateLatency": 0.2,
+          "UpdateFrequency": 5,
+          "StartupDelay": 1
+        },
+        "Magnetometer": {
+          "SensorType": 4,
+          "Enabled": true,
+          "NoiseSigma": 0.005,
+          "ScaleFactor": 1.0,
+          "NoiseBias": 0.0
+        },
+        "Distance": {
+          "SensorType": 5,
+          "Enabled": true,
+          "MinDistance": 0.2,
+          "MaxDistance": 40.0,
+          "X": 0, "Y": 0, "Z": -1,
+          "Roll": 0, "Pitch": 0, "Yaw": 0
+        }
       },
-      "X": 0, "Y": 0, "Z": -10,
-      "Pitch": 0.0, "Roll": 0.0, "Yaw": 0.0
+      
+      "Parameters": {
+        "NAV_RCL_ACT": 0,
+        "NAV_DLL_ACT": 0,
+        "COM_OBL_ACT": 1,
+        "LPE_LAT": 47.641468,
+        "LPE_LON": -122.140165
+      },
+      
+      "Cameras": {
+        "front_center": {
+          "CaptureSettings": [
+            {
+              "ImageType": 0,
+              "Width": 640,
+              "Height": 480,
+              "FOV_Degrees": 90,
+              "AutoExposureSpeed": 100,
+              "MotionBlurAmount": 0
+            }
+          ],
+          "X": 0.25, "Y": 0, "Z": 0,
+          "Pitch": 0, "Roll": 0, "Yaw": 0
+        },
+        "bottom_center": {
+          "CaptureSettings": [
+            {
+              "ImageType": 0,
+              "Width": 640,
+              "Height": 480,
+              "FOV_Degrees": 90
+            }
+          ],
+          "X": 0, "Y": 0, "Z": 0.3,
+          "Pitch": -90, "Roll": 0, "Yaw": 0
+        }
+      }
     }
+  },
+  
+  "CameraDefaults": {
+    "CaptureSettings": [
+      {
+        "ImageType": 0,
+        "Width": 640,
+        "Height": 480,
+        "FOV_Degrees": 90,
+        "AutoExposureSpeed": 100,
+        "MotionBlurAmount": 0
+      }
+    ]
   }
-
 }
+
+
