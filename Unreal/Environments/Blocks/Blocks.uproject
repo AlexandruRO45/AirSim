@@ -33,6 +33,10 @@
 				"Android",
 				"IOS"
 			]
+		},
+		{
+			"Name": "PixelStreaming",
+			"Enabled": true
 		}
 	]
 }
