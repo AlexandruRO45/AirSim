@@ -1,15 +1,22 @@
 {
   "SeeDocsAt": "https://cosys-lab.github.io/Cosys-AirSim/settings/",
   "SettingsVersion": 2.0,
+  "SimMode": "Multirotor",
+  "ClockType": "SteppableClock",
+  "LogMessagesVisible": true,
   "RecordUIVisible": false,
+  "LocalHostIp": "172.24.192.1",
+
+
   "Recording": {
+    "Enabled": false,
     "RecordOnMove": false,
     "RecordInterval": 0.05,
-    "Cameras": []
+    "Cameras": [
+      {"CameraName": "front_center", "ImageType": 0, "PixelsAsFloat": false,  "VehicleName": "PX4", "Compress": true },
+      {"CameraName": "bottom_center", "ImageType": 0, "PixelsAsFloat": false,  "VehicleName": "PX4", "Compress": true }
+    ]
   },
-  "LogMessagesVisible": true,
-  "ClockType": "SteppableClock",
-  "SimMode": "Multirotor",
 
   "OriginGeopoint": {
     "Latitude": 44.503,
@@ -18,9 +25,9 @@
   },
 
   "SubWindows": [
-    {"WindowID": 0, "CameraName": "0", "ImageType": 3, "VehicleName": "PX4", "Visible": false, "External": false},
-    {"WindowID": 1, "CameraName": "0", "ImageType": 5, "VehicleName": "PX4", "Visible": false, "External": false},
-    {"WindowID": 2, "CameraName": "0", "ImageType": 0, "VehicleName": "PX4", "Visible": false, "External": false}
+    {"WindowID": 0, "CameraName": "front_center", "ImageType": 3, "VehicleName": "PX4", "Visible": true, "External": false},
+    {"WindowID": 1, "CameraName": "front_center", "ImageType": 5, "VehicleName": "PX4", "Visible": true, "External": false},
+    {"WindowID": 2, "CameraName": "front_center", "ImageType": 0, "VehicleName": "PX4", "Visible": true, "External": false}
   ],
   
   "Vehicles": {
@@ -30,7 +37,7 @@
       
       "X": 0, 
       "Y": 0, 
-      "Z": -10,
+      "Z": -2.0,
       "Pitch": 0, 
       "Roll": 0, 
       "Yaw": 0,
@@ -67,7 +74,6 @@
       
       "LocalHostIp": "172.24.192.1",
       "Model": "Generic",
-      
       "Logs": "",
       
       "Sensors": {
