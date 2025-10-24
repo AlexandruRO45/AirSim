@@ -13,8 +13,8 @@
     "RecordOnMove": false,
     "RecordInterval": 0.05,
     "Cameras": [
-      {"CameraName": "front_center", "ImageType": 0, "PixelsAsFloat": false,  "VehicleName": "PX4", "Compress": true },
-      {"CameraName": "bottom_center", "ImageType": 0, "PixelsAsFloat": false,  "VehicleName": "PX4", "Compress": true }
+      {"CameraName": "front_center", "ImageType": 0, "PixelsAsFloat": false, "VehicleName": "PX4", "Compress": true},
+      {"CameraName": "bottom_center", "ImageType": 0, "PixelsAsFloat": false, "VehicleName": "PX4", "Compress": true}
     ]
   },
 
@@ -45,20 +45,17 @@
       "Lockstep": true,
       
       "UseSerial": false,
-      "UseTcp": false,
+      "UseTcp": true,
       "SerialPort": "*",
       "SerialBaudRate": 115200,
       "TcpPort": 4560,
       
-      "UdpIp": "172.24.192.1",
       "UdpPort": 14560,
-      
-      "ControlIp": "172.24.192.1",
+      "ControlIp": "172.24.199.187",
       "ControlPortLocal": 14540,
       "ControlPortRemote": 14580,
-      
-      "QgcHostIp": "172.24.192.1",
-      "QgcPort": 14550,
+
+      "QgcHostIp": "",
       
       "LogViewerHostIp": "172.24.192.1",
       "LogViewerPort": 14388,
@@ -127,9 +124,12 @@
       "Parameters": {
         "NAV_RCL_ACT": 0,
         "NAV_DLL_ACT": 0,
-        "COM_OBL_ACT": 1,
         "LPE_LAT": 44.503,
-        "LPE_LON": 26.102
+        "LPE_LON": 26.102,
+        "MAV_1_MODE": 2,
+        "MAV_1_RATE": 4000,
+        "MAV_1_FORWARD": 1,
+        "MAV_1_BROADCAST": 1
       },
       
       "Cameras": {
@@ -176,5 +176,3 @@
     ]
   }
 }
-
-
