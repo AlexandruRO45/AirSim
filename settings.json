@@ -7,14 +7,25 @@
   "RecordUIVisible": false,
   "LocalHostIp": "172.24.192.1",
 
-
   "Recording": {
     "Enabled": false,
     "RecordOnMove": false,
     "RecordInterval": 0.05,
     "Cameras": [
-      {"CameraName": "front_center", "ImageType": 0, "PixelsAsFloat": false, "VehicleName": "PX4", "Compress": true},
-      {"CameraName": "bottom_center", "ImageType": 0, "PixelsAsFloat": false, "VehicleName": "PX4", "Compress": true}
+      {
+        "CameraName": "front_center",
+        "ImageType": 0,
+        "PixelsAsFloat": false,
+        "VehicleName": "PX4",
+        "Compress": true
+      },
+      {
+        "CameraName": "bottom_center",
+        "ImageType": 0,
+        "PixelsAsFloat": false,
+        "VehicleName": "PX4",
+        "Compress": true
+      }
     ]
   },
 
@@ -25,54 +36,75 @@
   },
 
   "SubWindows": [
-    {"WindowID": 0, "CameraName": "front_center", "ImageType": 3, "VehicleName": "PX4", "Visible": false, "External": false},
-    {"WindowID": 1, "CameraName": "front_center", "ImageType": 5, "VehicleName": "PX4", "Visible": false, "External": false},
-    {"WindowID": 2, "CameraName": "front_center", "ImageType": 0, "VehicleName": "PX4", "Visible": false, "External": false}
+    {
+      "WindowID": 0,
+      "CameraName": "front_center",
+      "ImageType": 3,
+      "VehicleName": "PX4",
+      "Visible": false,
+      "External": false
+    },
+    {
+      "WindowID": 1,
+      "CameraName": "front_center",
+      "ImageType": 5,
+      "VehicleName": "PX4",
+      "Visible": false,
+      "External": false
+    },
+    {
+      "WindowID": 2,
+      "CameraName": "front_center",
+      "ImageType": 0,
+      "VehicleName": "PX4",
+      "Visible": false,
+      "External": false
+    }
   ],
-  
+
   "Vehicles": {
     "PX4": {
       "VehicleType": "PX4Multirotor",
       "AutoCreate": true,
-      
-      "X": 0, 
-      "Y": 0, 
+
+      "X": 0,
+      "Y": 0,
       "Z": -2.0,
-      "Pitch": 0, 
-      "Roll": 0, 
+      "Pitch": 0,
+      "Roll": 0,
       "Yaw": 0,
-      
+
       "Lockstep": true,
-      
+
       "UseSerial": false,
       "UseTcp": true,
       "SerialPort": "*",
       "SerialBaudRate": 115200,
       "TcpPort": 4560,
-      
+
       "UdpPort": 14560,
       "ControlIp": "172.24.199.187",
       "ControlPortLocal": 14540,
       "ControlPortRemote": 14580,
 
       "QgcHostIp": "",
-      
+
       "LogViewerHostIp": "172.24.192.1",
       "LogViewerPort": 14388,
-      
+
       "OffboardSysID": 134,
       "OffboardCompID": 1,
-      
+
       "VehicleSysID": 135,
       "VehicleCompID": 1,
-      
+
       "SimSysID": 142,
       "SimCompID": 42,
-      
+
       "LocalHostIp": "172.24.192.1",
       "Model": "Generic",
       "Logs": "",
-      
+
       "Sensors": {
         "Barometer": {
           "SensorType": 1,
@@ -84,7 +116,7 @@
           "Enabled": true,
           "AngularRandomWalk": 0.3,
           "GyroBiasStabilityTau": 3600.0,
-          "GyroBiasStability": 4.6e-05,
+          "GyroBiasStability": 4.6e-5,
           "VelocityRandomWalk": 0.24,
           "AccelBiasStabilityTau": 3600.0,
           "AccelBiasStability": 0.00036
@@ -116,11 +148,15 @@
           "Enabled": true,
           "MinDistance": 0.2,
           "MaxDistance": 40.0,
-          "X": 0, "Y": 0, "Z": -1,
-          "Roll": 0, "Pitch": 0, "Yaw": 0
+          "X": 0,
+          "Y": 0,
+          "Z": -1,
+          "Roll": 0,
+          "Pitch": 0,
+          "Yaw": 0
         }
       },
-      
+
       "Parameters": {
         "NAV_RCL_ACT": 0,
         "NAV_DLL_ACT": 0,
@@ -131,7 +167,7 @@
         "MAV_1_FORWARD": 1,
         "MAV_1_BROADCAST": 1
       },
-      
+
       "Cameras": {
         "front_center": {
           "CaptureSettings": [
@@ -144,8 +180,12 @@
               "MotionBlurAmount": 0
             }
           ],
-          "X": 0.25, "Y": 0, "Z": 0,
-          "Pitch": 0, "Roll": 0, "Yaw": 0
+          "X": 0.25,
+          "Y": 0,
+          "Z": 0,
+          "Pitch": 0,
+          "Roll": 0,
+          "Yaw": 0
         },
         "bottom_center": {
           "CaptureSettings": [
@@ -156,13 +196,17 @@
               "FOV_Degrees": 90
             }
           ],
-          "X": 0, "Y": 0, "Z": 0.3,
-          "Pitch": -90, "Roll": 0, "Yaw": 0
+          "X": 0,
+          "Y": 0,
+          "Z": 0.3,
+          "Pitch": -90,
+          "Roll": 0,
+          "Yaw": 0
         }
       }
     }
   },
-  
+
   "CameraDefaults": {
     "CaptureSettings": [
       {
